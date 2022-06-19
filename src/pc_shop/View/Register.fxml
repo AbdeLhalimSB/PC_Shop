@@ -28,8 +28,8 @@
             <Label layoutX="197.0" layoutY="439.0" text="Description" textFill="WHITE" />
          </children>
       </Pane>
-      <TextField layoutX="641.0" layoutY="151.0" prefHeight="36.0" prefWidth="229.0" promptText="Email" styleClass="login_txb" stylesheets="@Style.css" />
-      <PasswordField layoutX="642.0" layoutY="206.0" prefHeight="36.0" prefWidth="229.0" promptText="Password" styleClass="login_txb" stylesheets="@Style.css" />
+      <TextField layoutX="656.0" layoutY="151.0" prefHeight="36.0" prefWidth="229.0" promptText="Email" styleClass="login_txb" stylesheets="@Style.css" />
+      <PasswordField layoutX="657.0" layoutY="206.0" prefHeight="36.0" prefWidth="229.0" promptText="Password" styleClass="login_txb" stylesheets="@Style.css" />
       <Button layoutX="671.0" layoutY="415.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="172.0" styleClass="bt_log" stylesheets="@Style.css" text="Sing up">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -47,9 +47,24 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <TextField layoutX="642.0" layoutY="265.0" prefHeight="36.0" prefWidth="229.0" promptText="Name" styleClass="login_txb" stylesheets="@Style.css" />
+      <TextField layoutX="657.0" layoutY="265.0" prefHeight="36.0" prefWidth="229.0" promptText="Name" styleClass="login_txb" stylesheets="@Style.css" />
       <RadioButton layoutX="658.0" layoutY="327.0" mnemonicParsing="false" text="Admin" />
       <RadioButton layoutX="772.0" layoutY="327.0" mnemonicParsing="false" text="Employee" />
+      <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="624.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="624.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="624.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/mailpng.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
