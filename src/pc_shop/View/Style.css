@@ -1,0 +1,38 @@
+.exit_btn{
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-background-color: red;
+}
+
+.all_btns{
+    -fx-background-color: #1F2121;
+}
+
+.all_btns:hover{
+    -fx-background-radius: 50px 10px 10px 50px;
+    -fx-background-color: red;
+    -fx-width: 50%;
+}
+
+.exit_btn:hover{
+    /* transition: 2s; */
+    -fx-background-color: black;
+    -fx-color: red;
+}
+
+.bt_log{
+    -fx-background-color: #1F2121;
+    -fx-color: red;
+    -fx-background-radius: 50px 50px 50px 50px;
+}
+
+.bt_log:hover{
+    -fx-background-color: red;
+}
+
+.login_txb{
+    -fx-background-radius: 50px 50px 50px 50px;
+}
+
+.home{
+    -fx-background-radius: 10px 10px 10px 10px;
+}
