@@ -25,14 +25,14 @@ public class Pc_Shop extends Application {
     
     @Override
     public void start(Stage stage) throws IOException {
-        //try {
-            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Services.fxml"));
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Login.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        //} catch (IOException ex) {
-            //Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        //}
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
     }
 
     /**

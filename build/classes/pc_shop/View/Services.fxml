@@ -28,7 +28,7 @@
                      <graphic>
                         <ImageView fitHeight="61.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" rotate="300.0">
                            <image>
-                              <Image url="@../../../../../../Supermarket-Mangement-System/src/superMarket/image/icons8-search-64.png" />
+                              <Image url="@../image/logo.png" />
                            </image>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -43,7 +43,7 @@
                      <graphic>
                         <ImageView fitHeight="61.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Supermarket-Mangement-System/src/superMarket/image/icons8-back-64.png" />
+                              <Image url="@../image/logo.png" />
                            </image>
                            <cursor>
                               <Cursor fx:constant="HAND" />
