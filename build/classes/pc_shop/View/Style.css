@@ -36,3 +36,7 @@
 .home{
     -fx-background-radius: 10px 10px 10px 10px;
 }
+
+.dowara{
+    -fx-background-radius: 1000px;
+}
