@@ -13,31 +13,31 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1075.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1075.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.ProductControl">
    <children>
       <AnchorPane prefHeight="671.0" prefWidth="264.0" style="-fx-background-color: #1F2121;">
          <children>
-            <Button fx:id="btn_home" layoutX="12.0" layoutY="35.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Home" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btn_home" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#pro" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Products" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Button>
-            <Button fx:id="btn_exit" layoutX="57.0" layoutY="446.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="ADD" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btn_add" layoutX="57.0" layoutY="460.0" mnemonicParsing="false" onAction="#add" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="ADD" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-            <Button fx:id="btn_exit1" layoutX="57.0" layoutY="524.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="DELETE" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btn_delete" layoutX="57.0" layoutY="533.0" mnemonicParsing="false" onAction="#del" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="DELETE" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-            <Button fx:id="btn_exit2" layoutX="57.0" layoutY="598.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="UPDATE" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btn_update" layoutX="57.0" layoutY="604.0" mnemonicParsing="false" onAction="#edit" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="UPDATE" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Button>
-            <TextField fx:id="txtName" focusTraversable="false" layoutX="18.0" layoutY="133.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Entre Name">
+            <TextField fx:id="Name_tx" focusTraversable="false" layoutX="18.0" layoutY="93.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Entre Name">
                <font>
                   <Font size="23.0" />
                </font>
@@ -45,7 +45,7 @@
                   <Blend />
                </effect>
             </TextField>
-            <TextField fx:id="txtName1" focusTraversable="false" layoutX="18.0" layoutY="208.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Enter Number">
+            <TextField fx:id="Qua_tx" focusTraversable="false" layoutX="18.0" layoutY="168.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Enter Quantity">
                <font>
                   <Font size="23.0" />
                </font>
@@ -53,7 +53,7 @@
                   <Blend />
                </effect>
             </TextField>
-            <TextField fx:id="txtName2" focusTraversable="false" layoutX="18.0" layoutY="282.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Enter Price">
+            <TextField fx:id="Price_tx" focusTraversable="false" layoutX="18.0" layoutY="241.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Enter Price">
                <font>
                   <Font size="23.0" />
                </font>
@@ -61,16 +61,24 @@
                   <Blend />
                </effect>
             </TextField>
-            <ComboBox fx:id="Type" focusTraversable="false" layoutX="18.0" layoutY="357.0" prefHeight="61.0" prefWidth="224.0" promptText="Type" style="-fx-fill: red;" visibleRowCount="3">
+            <ComboBox fx:id="slm" focusTraversable="false" layoutX="18.0" layoutY="385.0" prefHeight="61.0" prefWidth="224.0" promptText="Type" style="-fx-fill: red;" visibleRowCount="3">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ComboBox>
+            <TextField fx:id="Des_tx" focusTraversable="false" layoutX="18.0" layoutY="313.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Description">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
          </children>
       </AnchorPane>
       <Pane layoutX="313.0" layoutY="7.0" prefHeight="97.0" prefWidth="715.0">
          <children>
-            <Button fx:id="btnBack" layoutX="91.0" layoutY="23.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="106.0" style="-fx-background-color: #1F2121;" styleClass="button1">
+            <Button fx:id="btnBack" layoutX="91.0" layoutY="23.0" mnemonicParsing="false" onAction="#Back" prefHeight="72.0" prefWidth="106.0" style="-fx-background-color: #1F2121;" styleClass="button1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -82,7 +90,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnSearch" layoutX="525.0" layoutY="24.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="102.0" style="-fx-background-color: #1F2121;" styleClass="button1">
+            <Button fx:id="btn_search" layoutX="525.0" layoutY="24.0" mnemonicParsing="false" onAction="#Search" prefHeight="70.0" prefWidth="102.0" style="-fx-background-color: #1F2121;" styleClass="button1">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -94,7 +102,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField fx:id="txtSearch" focusTraversable="false" layoutX="228.0" layoutY="27.0" opacity="0.8" prefHeight="68.0" prefWidth="278.0" promptText="Entre Name ....">
+            <TextField fx:id="search_tx" focusTraversable="false" layoutX="228.0" layoutY="27.0" opacity="0.8" prefHeight="68.0" prefWidth="278.0" promptText="Entre Name ....">
                <font>
                   <Font size="23.0" />
                </font>
@@ -103,13 +111,14 @@
                </effect>
             </TextField>
          </children></Pane>
-      <TableView layoutX="272.0" layoutY="124.0" prefHeight="539.0" prefWidth="796.0">
+      <TableView fx:id="product_view" layoutX="272.0" layoutY="124.0" onMouseClicked="#clickTable" prefHeight="539.0" prefWidth="796.0">
         <columns>
-          <TableColumn prefWidth="93.0" text="ID" />
-          <TableColumn prefWidth="192.0" text="Name" />
-            <TableColumn prefWidth="98.0" text="Number" />
-            <TableColumn minWidth="3.0" prefWidth="156.0" text="Price" />
-            <TableColumn minWidth="0.0" prefWidth="151.0" text="Type" />
+          <TableColumn fx:id="id" prefWidth="93.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="157.0" text="Name" />
+            <TableColumn fx:id="quantity" prefWidth="81.0" text="Quantity" />
+            <TableColumn fx:id="price" minWidth="3.0" prefWidth="128.0" text="Price" />
+            <TableColumn fx:id="type" minWidth="0.0" prefWidth="144.0" text="Type" />
+            <TableColumn fx:id="description" minWidth="0.0" prefWidth="192.0" text="Description" />
         </columns>
       </TableView>
    </children>

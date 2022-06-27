@@ -23,4 +23,10 @@ public class ConnectionDB {
         }
         return con;
     }
+    
+    public static void closeConnection(){
+        if(con!=null){
+            con=null;
+        }
+    }
 }
