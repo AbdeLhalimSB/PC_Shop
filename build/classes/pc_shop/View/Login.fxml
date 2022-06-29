@@ -41,7 +41,7 @@
          <font>
             <Font name="Impact" size="63.0" />
          </font></Label>
-      <Label layoutX="689.0" layoutY="445.0" text="Don't have account yet ?" underline="true" AnchorPane.leftAnchor="689.0" AnchorPane.rightAnchor="189.0">
+      <Label fx:id="goto_reg" layoutX="689.0" layoutY="445.0" onMouseClicked="#Goto_Reg" text="Don't have account yet ?" underline="true" AnchorPane.leftAnchor="689.0" AnchorPane.rightAnchor="189.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

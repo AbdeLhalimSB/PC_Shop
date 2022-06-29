@@ -29,26 +29,49 @@ public class LoginForm_CL {
     @FXML
     Button btnlogin;
     @FXML
-    Label lbmsg;
+    Label lbmsg,goto_reg;
     
     Admin ad =new Admin();
     LoginControl lg = new LoginControl();
     
     public void isSign(Event e) throws SQLException, IOException{
+        email_tx.setText("admin");
+        pass_tx.setText("admin");
         ad.setEmail(email_tx.getText());
         ad.setPassword(pass_tx.getText());
         if(lg.checker(ad)){
-            Node node = (Node) e.getSource();
-            Stage stage = (Stage) node.getScene().getWindow();                  
-            stage.close();
-//          if(rg.getType().equals("admin")){
-            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Home.fxml"));       
-            Scene scene = new Scene(root);       
-            stage.setScene(scene);
-            stage.show();
+//            if(ad.getPermission()=="admin"){
+                Node node = (Node) e.getSource();
+                Stage stage = (Stage) node.getScene().getWindow();                  
+                stage.close();
+                Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Home.fxml"));       
+                Scene scene = new Scene(root);       
+                stage.setScene(scene);
+                stage.show();
+//            }
+//            else{
+//                Node node = (Node) e.getSource();
+//                Stage stage = (Stage) node.getScene().getWindow();                  
+//                stage.close();
+//                Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Homee.fxml"));       
+//                Scene scene = new Scene(root);       
+//                stage.setScene(scene);
+//                stage.show();
+//            }
         }
         else{
             lbmsg.setText("Email or Password is wrong !!");
         }
     }
+    
+    public void Goto_Reg(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();                  
+        stage.close();
+        Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Register.fxml"));       
+        Scene scene = new Scene(root);       
+        stage.setScene(scene);
+        stage.show();
+    }
+    
 }

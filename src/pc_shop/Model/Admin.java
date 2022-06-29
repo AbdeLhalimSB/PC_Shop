@@ -7,10 +7,26 @@ package pc_shop.Model;
  */
 public class Admin {
     private String Email;
-    private String Password;
+    private String Password,Name,Permission;
 
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+
+    public String getPermission() {
+        return Permission;
+    }
+
+    public void setPermission(String Permission) {
+        this.Permission = Permission;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public void setPassword(String Password) {

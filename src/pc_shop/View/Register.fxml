@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.RegisterForm_CL">
    <children>
       <Pane prefHeight="601.0" prefWidth="476.0" style="-fx-background-color: #36393F;">
          <children>
@@ -28,28 +28,28 @@
             <Label layoutX="197.0" layoutY="439.0" text="Description" textFill="WHITE" />
          </children>
       </Pane>
-      <TextField layoutX="656.0" layoutY="151.0" prefHeight="36.0" prefWidth="229.0" promptText="Email" styleClass="login_txb" stylesheets="@Style.css" />
-      <PasswordField layoutX="657.0" layoutY="206.0" prefHeight="36.0" prefWidth="229.0" promptText="Password" styleClass="login_txb" stylesheets="@Style.css" />
-      <Button layoutX="671.0" layoutY="415.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="172.0" styleClass="bt_log" stylesheets="@Style.css" text="Sing up">
+      <TextField fx:id="Email_tx" layoutX="656.0" layoutY="151.0" prefHeight="36.0" prefWidth="229.0" promptText="Email" styleClass="login_txb" stylesheets="@Style.css" />
+      <PasswordField fx:id="Password_tx" layoutX="657.0" layoutY="206.0" prefHeight="36.0" prefWidth="229.0" promptText="Password" styleClass="login_txb" stylesheets="@Style.css" />
+      <Button fx:id="Singup" layoutX="671.0" layoutY="395.0" mnemonicParsing="false" onAction="#register" prefHeight="44.0" prefWidth="172.0" styleClass="bt_log" stylesheets="@Style.css" text="Sing up">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Line endX="195.0" layoutX="709.0" layoutY="387.0" startX="-100.0" />
+      <Line endX="195.0" layoutX="709.0" layoutY="354.0" startX="-100.0" />
       <Label layoutX="645.0" layoutY="48.0" text="Register">
          <font>
             <Font name="Impact" size="63.0" />
          </font></Label>
-      <Label layoutX="739.0" layoutY="480.0" text="Log in" underline="true">
+      <Label fx:id="goto_log" layoutX="739.0" layoutY="460.0" onMouseClicked="#Goto_Log" text="Log in" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <TextField layoutX="657.0" layoutY="265.0" prefHeight="36.0" prefWidth="229.0" promptText="Name" styleClass="login_txb" stylesheets="@Style.css" />
-      <RadioButton layoutX="658.0" layoutY="327.0" mnemonicParsing="false" text="Admin" />
-      <RadioButton layoutX="772.0" layoutY="327.0" mnemonicParsing="false" text="Employee" />
+      <TextField fx:id="Name_tx" layoutX="657.0" layoutY="265.0" prefHeight="36.0" prefWidth="229.0" promptText="Name" styleClass="login_txb" stylesheets="@Style.css" />
+      <RadioButton fx:id="adminr" layoutX="658.0" layoutY="327.0" mnemonicParsing="false" text="Admin" visible="false" />
+      <RadioButton fx:id="employeer" layoutX="772.0" layoutY="327.0" mnemonicParsing="false" text="Employee" visible="false" />
       <ImageView fitHeight="36.0" fitWidth="28.0" layoutX="624.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../image/user.png" />

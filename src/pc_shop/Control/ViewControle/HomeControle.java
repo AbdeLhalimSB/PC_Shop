@@ -9,7 +9,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
@@ -31,6 +30,7 @@ public class HomeControle {
     @FXML
     Button btn_exit;
     
+    
     public void openProducts(Event e) throws IOException{
         Node node = (Node) e.getSource();
             Stage stage = (Stage) node.getScene().getWindow();                  
@@ -44,7 +44,7 @@ public class HomeControle {
         Node node = (Node) e.getSource();
             Stage stage = (Stage) node.getScene().getWindow();                  
             stage.close();
-            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Products.fxml"));       
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Services.fxml"));       
             Scene scene = new Scene(root);       
             stage.setScene(scene);
             stage.show();
