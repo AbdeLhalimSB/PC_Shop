@@ -56,7 +56,7 @@ public class RegisterForm_CL {
             ad.setPermission("employee");
         }
         state = ConnectionDB.openConnection().createStatement();
-        state.executeUpdate("insert into users (`Email`,`Password`,`Name`,`Permission`) values ('"+ad.getEmail()+"', '"+ad.getPassword()+"', '"+ad.getName()+"', 'admin') ");
+        state.executeUpdate("insert into users (`Email`,`Password`,`Name`) values ('"+ad.getEmail()+"', '"+ad.getPassword()+"', '"+ad.getName()+"') ");
         ConnectionDB.closeConnection();
     }
 }

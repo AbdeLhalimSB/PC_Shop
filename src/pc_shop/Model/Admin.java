@@ -8,6 +8,15 @@ package pc_shop.Model;
 public class Admin {
     private String Email;
     private String Password,Name,Permission;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setEmail(String Email) {
         this.Email = Email;

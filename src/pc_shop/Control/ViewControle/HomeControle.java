@@ -62,7 +62,7 @@ public class HomeControle {
         Node node = (Node) e.getSource();
             Stage stage = (Stage) node.getScene().getWindow();                  
             stage.close();
-            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Products.fxml"));       
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Employee.fxml"));       
             Scene scene = new Scene(root);       
             stage.setScene(scene);
             stage.show();

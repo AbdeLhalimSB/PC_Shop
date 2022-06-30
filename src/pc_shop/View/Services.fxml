@@ -123,7 +123,7 @@
                   <TextField fx:id="empn_tx" cache="true" layoutX="50.0" layoutY="382.0" prefHeight="25.0" prefWidth="114.0" promptText="Employee" style="-fx-background-color: none;" stylesheets="@Style.css" />
                   <ImageView fitHeight="75.0" fitWidth="102.0" layoutX="347.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Copyright.png" />
+                        <Image url="@../image/Copyright.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="30.0" layoutY="160.0" text="Total : " />
