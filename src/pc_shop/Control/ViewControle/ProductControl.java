@@ -62,6 +62,7 @@ public class ProductControl{
         DisplayProducts();
     }
     
+        
     
     public void DisplayProducts() throws SQLException{
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -195,19 +196,19 @@ public class ProductControl{
     
      public void Back(Event e)
     {
-     try {
-           Node node = (Node) e.getSource();
-           Stage stage = (Stage) node.getScene().getWindow();                  
-           stage.close();
+        try {
+              Node node = (Node) e.getSource();
+              Stage stage = (Stage) node.getScene().getWindow();                  
+              stage.close();
 
-           Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Home.fxml"));       
-           Scene scene = new Scene(root);       
-           stage.setScene(scene);
-           stage.show();
+              Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Home.fxml"));       
+              Scene scene = new Scene(root);       
+              stage.setScene(scene);
+              stage.show();
 
-    } catch (Exception ex) {
-        System.out.println("y"+ex.getMessage());
-    }
+       } catch (Exception ex) {
+           System.out.println("y"+ex.getMessage());
+       }
     }
      
      String  TypeProduct[]={"PC","GPU","CPU"};;

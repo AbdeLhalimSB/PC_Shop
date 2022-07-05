@@ -28,6 +28,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import pc_shop.Control.ConnectionDB;
 import pc_shop.Model.ModelProduct;
+import pc_shop.Model.Statistic;
 
 /**
  *
@@ -181,6 +182,9 @@ public class Services_CL {
         if(product.getQuantity()>0){
             int nq = product.getQuantity()-Integer.parseInt(Qua_tx.getText());
             state.executeUpdate("UPDATE products set  `Quantity` = "+nq+" WHERE id = "+ID);
+            int q = Integer.parseInt(Qua_tx.getText());
+            setsell(q,product.getType());
+            allsells(q);
         }
         else{
             error.setText("Stock is out");
@@ -190,6 +194,7 @@ public class Services_CL {
         TOTAL.setText(Double.toString(total));
         printerinfos(product);
         pro(e);
+        
     }
     
     public void Print(Event e){
@@ -210,6 +215,49 @@ public class Services_CL {
         q.setText(Qua_tx.getText());
         d.setText(p.getDescription());
         tt.setText(Double.toString(total));
+    }
+    
+    public void setsell(int qua,String type) throws SQLException{
+        state = ConnectionDB.openConnection().createStatement();
+        System.out.println(type);
+        if(type.contains("PC")){
+            type="pcs";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `pcs` = "+res);
+        }
+        else if(type.contains("CPU")){
+            type="cpus";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `cpus` = "+res);
+        }
+        else if(type.contains("GPU")){
+            type="gpus";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `gpus` = "+res);
+        }
+        ConnectionDB.closeConnection();
+    }
+    public void allsells(int q) throws SQLException{
+        state = ConnectionDB.openConnection().createStatement();
+        ResultSet result =state.executeQuery("SELECT totalsells FROM `statistic`");
+        result.beforeFirst();
+        result.next();
+        String val = result.getString(1);
+        int res = Integer.parseInt(val)+q;
+        state.executeUpdate("UPDATE statistic set  `totalsells` = "+res);
+        ConnectionDB.closeConnection();
     }
     
 }

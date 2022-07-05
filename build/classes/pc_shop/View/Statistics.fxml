@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.Statistic_CL">
+   <children>
+      <AnchorPane prefHeight="647.0" prefWidth="295.0" style="-fx-background-color: #1F2121;">
+         <children>
+            <Button layoutX="16.0" layoutY="13.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="267.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Statistics" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="104.0" text="TOTAL Sells : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalsells" layoutX="204.0" layoutY="104.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="162.0" text="PC :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="pcs" layoutX="204.0" layoutY="162.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="213.0" text="CPU : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="cpus" layoutX="204.0" layoutY="213.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="267.0" text="GPU : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="gpus" layoutX="204.0" layoutY="267.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Line endX="134.0" layoutX="141.0" layoutY="336.0" startX="-122.0" stroke="RED" />
+            <Label layoutX="23.0" layoutY="375.0" text="TOTAL Stock: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalst" layoutX="206.0" layoutY="375.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="433.0" text="PC :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="pcst" layoutX="206.0" layoutY="433.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="484.0" text="CPU : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="cpust" layoutX="206.0" layoutY="484.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="538.0" text="GPU : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="gpust" layoutX="206.0" layoutY="538.0" text="0" textFill="#00ff09">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_back" layoutX="12.0" layoutY="589.0" mnemonicParsing="false" onAction="#Back" prefHeight="42.0" prefWidth="125.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Back" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_reset" layoutX="155.0" layoutY="589.0" mnemonicParsing="false" onAction="#Reset" prefHeight="42.0" prefWidth="125.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Reset" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <PieChart fx:id="chart" layoutX="301.0" layoutY="11.0" prefHeight="626.0" prefWidth="771.0" />
+   </children>
+</AnchorPane>
