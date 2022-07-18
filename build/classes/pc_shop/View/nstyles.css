@@ -1,0 +1,15 @@
+.logintxtbox{
+    -fx-background-radius: 50px 50px 50px 50px;
+    -fx-background-color: white;
+}
+
+.loginbtn{
+    -fx-background-radius: 50px 50px 50px 50px;
+    -fx-background-color: red;
+
+}
+
+.loginbtn:hover{
+    /* -fx-background-color: black; */
+    -fx-border-width:100px;
+}
