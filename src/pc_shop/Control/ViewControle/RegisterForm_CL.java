@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -58,5 +59,10 @@ public class RegisterForm_CL {
         state = ConnectionDB.openConnection().createStatement();
         state.executeUpdate("insert into users (`Email`,`Password`,`Name`) values ('"+ad.getEmail()+"', '"+ad.getPassword()+"', '"+ad.getName()+"') ");
         ConnectionDB.closeConnection();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Register");
+        alert.setHeaderText("Register status ");
+        alert.setContentText("Register Done !!");
+        alert.showAndWait();
     }
 }

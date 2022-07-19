@@ -7,12 +7,17 @@ import java.sql.Statement;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.print.PageLayout;
+import javafx.print.PageOrientation;
+import javafx.print.Paper;
+import javafx.print.PrinterJob;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import pc_shop.Control.ConnectionDB;
 
@@ -25,6 +30,8 @@ public class Statistic_CL {
     PieChart chart;
     @FXML
     Button btn_back;
+    @FXML
+    AnchorPane print;
     @FXML
     Label totalsells,pcs,cpus,gpus,totalst,pcst,cpust,gpust,rams,mds,bs,ms,cs,pss,ss,pcos,ods,cables,acs,ram,md,b,m,c,psss,s,pco,od,cable,ac;
     @FXML
@@ -147,7 +154,7 @@ public class Statistic_CL {
         result.beforeFirst();
         result.next();
         bs.setText(result.getString(1));
-        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'PC Cooling' ;");
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Coolings' ;");
         result.beforeFirst();
         result.next();
         pcos.setText(result.getString(1));
@@ -172,6 +179,18 @@ public class Statistic_CL {
         state.executeUpdate("UPDATE `statistic` SET `totalsells`='0',`pcs`='0',`cpus`='0',`gpus`='0',`totalstock`='0',`pcst`='0',`cpust`='0',`gpust`='0' ");
         ConnectionDB.closeConnection();
         getalldata();
+    }
+    
+    public void Print(Event e){
+        PrinterJob printerJob = PrinterJob.createPrinterJob();
+        if (printerJob != null) {
+          PageLayout pageLayout = printerJob.getPrinter().createPageLayout(Paper.A3, PageOrientation.LANDSCAPE, 0, 0, 0, 0);
+
+          boolean success = printerJob.printPage(pageLayout, print);
+          if (success) {
+            printerJob.endJob();
+          }
+        }
     }
     
 }

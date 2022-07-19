@@ -28,7 +28,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import pc_shop.Control.ConnectionDB;
 import pc_shop.Model.ModelProduct;
-import pc_shop.Model.Statistic;
 
 /**
  *
@@ -157,8 +156,7 @@ public class Services_CL {
     }
     }
      
-     String  TypeProduct[]={"PC","GPU","CPU"};;
-    ObservableList<String> olType =FXCollections.observableArrayList(TypeProduct);
+    
 
     
     public void clear(){
@@ -210,11 +208,32 @@ public class Services_CL {
     }
     
     public void printerinfos(ModelProduct p){
-        n.setText(p.getName());
-        pr.setText(Double.toString(p.getPrice()));
-        q.setText(Qua_tx.getText());
-        d.setText(p.getDescription());
-        tt.setText(Double.toString(total));
+        if(n.getText()==""){
+            n.setText(n.getText()+""+p.getName());
+        }
+        else{
+            n.setText(n.getText()+"\n"+p.getName());
+        }
+        if(pr.getText()==""){
+            pr.setText(pr.getText()+""+Double.toString(p.getPrice()));
+        }
+        else{
+            pr.setText(pr.getText()+"\n"+Double.toString(p.getPrice()));
+        }
+        if(q.getText()==""){
+            q.setText(q.getText()+""+Qua_tx.getText());
+        }
+        else{
+            q.setText(q.getText()+"\n"+Qua_tx.getText());
+        }
+        if(d.getText()==""){
+            d.setText(d.getText()+""+p.getDescription());
+        }
+        else{
+            d.setText(d.getText()+"\n"+p.getDescription());
+        }
+        
+        tt.setText(TOTAL.getText());
     }
     
     public void setsell(int qua,String type) throws SQLException{

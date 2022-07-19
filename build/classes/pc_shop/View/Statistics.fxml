@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.Statistic_CL">
+<AnchorPane fx:id="print" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.Statistic_CL">
    <children>
       <AnchorPane layoutX="-1.0" prefHeight="647.0" prefWidth="296.0" style="-fx-background-color: #1F2121;">
          <children>
@@ -56,7 +59,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Line endX="134.0" layoutX="141.0" layoutY="350.0" startX="-122.0" stroke="RED" />
+            <Line endX="134.0" layoutX="141.0" layoutY="350.0" startX="-122.0" stroke="RED" strokeWidth="2.0" />
             <Label layoutX="23.0" layoutY="363.0" text="TOTAL Stock: " textFill="WHITE">
                <font>
                   <Font name="System Bold" size="19.0" />
@@ -330,5 +333,17 @@
          </children>
       </AnchorPane>
       <PieChart fx:id="chart" layoutX="301.0" layoutY="11.0" prefHeight="626.0" prefWidth="771.0" />
+      <Button fx:id="printer" layoutX="1005.0" layoutY="14.0" mnemonicParsing="false" onAction="#Print" prefHeight="28.0" prefWidth="36.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/printer%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

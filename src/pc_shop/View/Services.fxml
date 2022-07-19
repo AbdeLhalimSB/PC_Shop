@@ -23,6 +23,13 @@
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/-customer-service-agent_89777.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button fx:id="btnBack" layoutX="8.0" layoutY="99.0" mnemonicParsing="false" onAction="#Back" prefHeight="72.0" prefWidth="106.0" style="-fx-background-color: #1F2121;" styleClass="button1">
                <cursor>
@@ -88,13 +95,13 @@
                   <Blend />
                </effect>
             </TextField>
-            <TableView fx:id="product_view" layoutX="15.0" layoutY="332.0" onMouseClicked="#clickTable" prefHeight="300.0" prefWidth="492.0">
+            <TableView fx:id="product_view" layoutX="15.0" layoutY="332.0" onMouseClicked="#clickTable" prefHeight="313.0" prefWidth="492.0">
                <columns>
                   <TableColumn fx:id="id" prefWidth="62.0" text="ID" />
                   <TableColumn fx:id="name" prefWidth="128.0" text="Name" />
-                  <TableColumn fx:id="quantity" prefWidth="88.0" text="Quantity" />
-                  <TableColumn fx:id="price" minWidth="3.0" prefWidth="89.0" text="Price" />
-                  <TableColumn fx:id="type" minWidth="0.0" prefWidth="45.0" text="Type" />
+                  <TableColumn fx:id="quantity" prefWidth="58.0" text="Quantity" />
+                  <TableColumn fx:id="price" minWidth="3.0" text="Price" />
+                  <TableColumn fx:id="type" minWidth="0.0" prefWidth="84.0" text="Type" />
                   <TableColumn fx:id="description" minWidth="0.0" prefWidth="79.0" text="Description" />
                </columns>
             </TableView>
@@ -102,49 +109,84 @@
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/sell.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Label fx:id="error" layoutX="25.0" layoutY="647.0" textFill="RED" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="527.0" prefHeight="751.0" prefWidth="549.0" style="-fx-background-color: #36393F;">
          <children>
-            <Pane fx:id="print" layoutX="36.0" layoutY="188.0" prefHeight="458.0" prefWidth="477.0" style="-fx-background-color: white;">
+            <Pane fx:id="print" layoutX="36.0" layoutY="149.0" prefHeight="497.0" prefWidth="477.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="30.0" layoutY="27.0" text="Name : " />
-                  <Label layoutX="30.0" layoutY="62.0" text="Quantity : " />
-                  <Label layoutX="30.0" layoutY="93.0" text="Price : " />
-                  <Label layoutX="30.0" layoutY="129.0" text="Description : " />
-                  <Label fx:id="n" layoutX="218.0" layoutY="27.0" />
-                  <Label fx:id="q" layoutX="218.0" layoutY="62.0" />
-                  <Label fx:id="pr" layoutX="218.0" layoutY="93.0" />
-                  <Label fx:id="d" layoutX="218.0" layoutY="129.0" prefHeight="17.0" prefWidth="244.0" />
-                  <Line endX="170.0" layoutX="225.0" layoutY="203.0" startX="-126.0" />
-                  <TextArea fx:id="w_tx" cache="true" layoutX="30.0" layoutY="229.0" prefHeight="125.0" prefWidth="412.0" promptText="Warranty Details" style="-fx-background-color: none;" stylesheets="@Style.css" />
-                  <TextField fx:id="empn_tx" cache="true" layoutX="50.0" layoutY="382.0" prefHeight="25.0" prefWidth="114.0" promptText="Employee" style="-fx-background-color: none;" stylesheets="@Style.css" />
-                  <ImageView fitHeight="75.0" fitWidth="102.0" layoutX="347.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+                  <Label layoutX="32.0" layoutY="45.0" text="Name" />
+                  <Label layoutX="180.0" layoutY="45.0" text="Quantity" />
+                  <Label layoutX="241.0" layoutY="45.0" text="Price" />
+                  <Label layoutX="351.0" layoutY="45.0" text="Description" />
+                  <Label fx:id="n" alignment="TOP_LEFT" layoutX="18.0" layoutY="79.0" prefHeight="167.0" prefWidth="152.0" />
+                  <Label fx:id="q" alignment="TOP_LEFT" layoutX="179.0" layoutY="77.0" prefHeight="167.0" prefWidth="46.0" textAlignment="CENTER" />
+                  <Label fx:id="pr" alignment="TOP_LEFT" layoutX="234.0" layoutY="78.0" prefHeight="167.0" prefWidth="41.0" textAlignment="CENTER" />
+                  <Label fx:id="d" alignment="TOP_LEFT" layoutX="283.0" layoutY="78.0" prefHeight="167.0" prefWidth="181.0" />
+                  <Line endX="356.0" layoutX="126.0" layoutY="291.0" startX="-126.0" strokeWidth="2.0" />
+                  <TextArea fx:id="w_tx" cache="true" layoutX="33.0" layoutY="321.0" prefHeight="86.0" prefWidth="412.0" promptText="Warranty Details" style="-fx-background-color: none;" stylesheets="@Style.css" />
+                  <TextField fx:id="empn_tx" cache="true" layoutX="28.0" layoutY="445.0" prefHeight="25.0" prefWidth="159.0" promptText="Employee" style="-fx-background-color: none;" stylesheets="@Style.css" />
+                  <ImageView fitHeight="75.0" fitWidth="102.0" layoutX="381.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/Copyright.png" />
+                        <Image url="@../image/champion_army_reward_achievement_badge_winner_gold_medal_icon_225520.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="30.0" layoutY="160.0" text="Total : " />
-                  <Label fx:id="tt" layoutX="219.0" layoutY="160.0" />
+                  <Label layoutX="21.0" layoutY="254.0" text="TOTAL :" />
+                  <Label fx:id="tt" layoutX="93.0" layoutY="254.0" underline="true" />
+                  <Line endX="352.0" layoutX="115.0" layoutY="280.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="115.0" layoutY="280.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="-337.0" layoutY="279.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="115.0" layoutY="35.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-30.0" layoutX="-177.0" layoutY="278.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-31.0" layoutX="-122.0" layoutY="279.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-30.0" layoutX="-72.0" layoutY="278.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="115.0" layoutY="74.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="115.0" layoutY="249.0" startX="-100.0" strokeWidth="2.0" />
+                  <Label layoutX="179.0" layoutY="4.0" text="Computer Planet">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
                </children></Pane>
             <Button layoutX="180.0" layoutY="663.0" mnemonicParsing="false" onAction="#Print" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: black;" styleClass="exit_btn" stylesheets="@Style.css" text="Print" textAlignment="CENTER" textFill="#04e104">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/printer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button layoutX="29.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="492.0" style="-fx-background-color: black;" styleClass="exit_btn" stylesheets="@Style.css" text="Bill" textAlignment="CENTER" textFill="#04e104">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/payment_bill_machine_icon_194099.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Label layoutX="36.0" layoutY="125.0" text="TOTAL" textFill="#04e104">
+            <Label layoutX="36.0" layoutY="102.0" text="TOTAL" textFill="#04e104">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <Label fx:id="TOTAL" layoutX="206.0" layoutY="125.0" text="0" textFill="#04e104">
+            <Label fx:id="TOTAL" layoutX="206.0" layoutY="102.0" text="0" textFill="#04e104">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
