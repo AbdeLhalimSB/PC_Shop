@@ -26,7 +26,7 @@ public class Statistic_CL {
     @FXML
     Button btn_back;
     @FXML
-    Label totalsells,pcs,cpus,gpus,totalst,pcst,cpust,gpust;
+    Label totalsells,pcs,cpus,gpus,totalst,pcst,cpust,gpust,rams,mds,bs,ms,cs,pss,ss,pcos,ods,cables,acs,ram,md,b,m,c,psss,s,pco,od,cable,ac;
     @FXML
     public void initialize() throws SQLException {
         getalldata();
@@ -43,7 +43,19 @@ public class Statistic_CL {
         chart.setStartAngle(180);
         chart.getData().add(new PieChart.Data("PC",Integer.parseInt(pcs.getText())));
         chart.getData().add(new PieChart.Data("CPU", Integer.parseInt(cpus.getText())));
-        chart.getData().add(new PieChart.Data("GPU", Integer.parseInt(gpus.getText())));    
+        chart.getData().add(new PieChart.Data("GPU", Integer.parseInt(gpus.getText())));   
+        chart.getData().add(new PieChart.Data("RAM", Integer.parseInt(ram.getText())));   
+        chart.getData().add(new PieChart.Data("Motherboard", Integer.parseInt(md.getText()))); 
+        chart.getData().add(new PieChart.Data("Battery", Integer.parseInt(b.getText())));  
+        chart.getData().add(new PieChart.Data("Monitor", Integer.parseInt(m.getText())));  
+        chart.getData().add(new PieChart.Data("Case", Integer.parseInt(c.getText())));  
+        chart.getData().add(new PieChart.Data("Power Supplie", Integer.parseInt(psss.getText())));  
+        chart.getData().add(new PieChart.Data("Storage", Integer.parseInt(s.getText())));  
+        chart.getData().add(new PieChart.Data("PC Cooling", Integer.parseInt(pco.getText())));  
+        chart.getData().add(new PieChart.Data("Optical Drives", Integer.parseInt(od.getText())));  
+        chart.getData().add(new PieChart.Data("Cable", Integer.parseInt(cable.getText())));  
+        chart.getData().add(new PieChart.Data("Accessories", Integer.parseInt(ac.getText())));  
+        
     }
     
     public void Back(Event e){
@@ -70,6 +82,17 @@ public class Statistic_CL {
             pcs.setText(result.getString(2));
             cpus.setText(result.getString(3));
             gpus.setText(result.getString(4));
+            ram.setText(result.getString(5));
+            md.setText(result.getString(6));
+            b.setText(result.getString(7));
+            m.setText(result.getString(8));
+            c.setText(result.getString(9));
+            psss.setText(result.getString(10));
+            s.setText(result.getString(11));
+            pco.setText(result.getString(12));
+            od.setText(result.getString(13));
+            cable.setText(result.getString(14));
+            ac.setText(result.getString(15));
         }
         ConnectionDB.closeConnection();
     }
@@ -92,6 +115,55 @@ public class Statistic_CL {
         result.beforeFirst();
         result.next();
         gpust.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'RAM' ;");
+        result.beforeFirst();
+        result.next();
+        rams.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Motherboard' ;");
+        result.beforeFirst();
+        result.next();
+        mds.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Battery' ;");
+        result.beforeFirst();
+        result.next();
+        bs.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Monitor' ;");
+        result.beforeFirst();
+        result.next();
+        ms.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Case' ;");
+        result.beforeFirst();
+        result.next();
+        cs.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Power Supplie' ;");
+        result.beforeFirst();
+        result.next();
+        pss.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Storage' ;");
+        result.beforeFirst();
+        result.next();
+        ss.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Battery' ;");
+        result.beforeFirst();
+        result.next();
+        bs.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'PC Cooling' ;");
+        result.beforeFirst();
+        result.next();
+        pcos.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Optical Drives' ;");
+        result.beforeFirst();
+        result.next();
+        ods.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Cable' ;");
+        result.beforeFirst();
+        result.next();
+        cables.setText(result.getString(1));
+        result =state.executeQuery("SELECT SUM(Quantity) FROM `products`  where Type= 'Accessories' ;");
+        result.beforeFirst();
+        result.next();
+        acs.setText(result.getString(1));
+
         ConnectionDB.closeConnection();
     }
     

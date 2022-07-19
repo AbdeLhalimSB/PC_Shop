@@ -57,7 +57,7 @@ public class ProductControl{
     @FXML
     public void initialize() throws SQLException {
         slm.getItems().removeAll(slm.getItems());
-        slm.getItems().addAll("PC", "GPU", "CPU");
+        slm.getItems().addAll("PC", "GPU", "CPU","RAM","Motherboard","Battery","Monitor","Case","Power Supplie","Storage","Coolings","Optical Drives","Cable","Accessories");
         slm.getSelectionModel().select("PC");
         DisplayProducts();
     }
@@ -211,8 +211,7 @@ public class ProductControl{
        }
     }
      
-     String  TypeProduct[]={"PC","GPU","CPU"};;
-    ObservableList<String> olType =FXCollections.observableArrayList(TypeProduct);
+    
 
     
     public void clear(){

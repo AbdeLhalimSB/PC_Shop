@@ -219,7 +219,6 @@ public class Services_CL {
     
     public void setsell(int qua,String type) throws SQLException{
         state = ConnectionDB.openConnection().createStatement();
-        System.out.println(type);
         if(type.contains("PC")){
             type="pcs";
             ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
@@ -247,6 +246,107 @@ public class Services_CL {
             int res = Integer.parseInt(val)+qua;
             state.executeUpdate("UPDATE statistic set  `gpus` = "+res);
         }
+        else if(type.contains("RAM")){
+            type="RAM";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `ram` = "+res);
+        }
+        else if(type.contains("Battery")){
+            type="b";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `b` = "+res);
+        }
+        else if(type.contains("Monitor")){
+            type="m";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `m` = "+res);
+        }
+        else if(type.contains("Case")){
+            type="c";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `c` = "+res);
+        }
+        else if(type.contains("Power Supplie")){
+            type="psss";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `psss` = "+res);
+        }
+        else if(type.contains("Storage")){
+            type="s";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `s` = "+res);
+        }
+        else if(type.contains("Coolings")){
+            type="pco";
+            System.out.println(type);
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `pco` = "+res);
+        }
+        else if(type.contains("Optical Drives")){
+            type="od";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `od` = "+res);
+        }
+        else if(type.contains("Cable")){
+            type="cable";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `cable` = "+res);
+        }
+        else if(type.contains("Accessories")){
+            type="ac";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `ac` = "+res);
+        }
+        else if(type.contains("Motherboard")){
+            type="md";
+            ResultSet result =state.executeQuery("SELECT "+type+" FROM `statistic`");
+            result.beforeFirst();
+            result.next();
+            String val = result.getString(1);
+            int res = Integer.parseInt(val)+qua;
+            state.executeUpdate("UPDATE statistic set  `md` = "+res);
+        }
+        
         ConnectionDB.closeConnection();
     }
     public void allsells(int q) throws SQLException{
