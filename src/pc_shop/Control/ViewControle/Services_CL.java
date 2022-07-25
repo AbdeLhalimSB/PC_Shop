@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -38,7 +39,9 @@ public class Services_CL {
     @FXML
     Button btn_add,btnBack,btn_search,refresh,sell;
     @FXML
-    TextField Name_tx,Qua_tx,Price_tx,Des_tx,search_tx,empn_tx;
+    TextField Name_tx,Qua_tx,Price_tx,Des_tx,search_tx,empn_tx,cl_name;
+    @FXML
+    DatePicker date;
     @FXML
     ComboBox slm;
     @FXML
@@ -195,7 +198,7 @@ public class Services_CL {
         
     }
     
-    public void Print(Event e){
+    public void Print(Event e) throws SQLException{
         PrinterJob printerJob = PrinterJob.createPrinterJob();
         if (printerJob != null) {
           PageLayout pageLayout = printerJob.getPrinter().createPageLayout(Paper.A4, PageOrientation.PORTRAIT, 0, 0, 0, 0);
@@ -205,6 +208,9 @@ public class Services_CL {
             printerJob.endJob();
           }
         }
+        state = ConnectionDB.openConnection().createStatement();
+        state.executeUpdate("insert into bills (`client`,`date`,`Name`,`Quantity`,`Price`,`Description`,`Total`,`Warranty`,`Employee`) values ('"+cl_name.getText()+"', '"+date.getValue().toString()+"', '"+n.getText()+"', '"+q.getText()+"', '"+pr.getText()+"', '"+d.getText()+"', '"+tt.getText()+"', '"+w_tx.getText()+"', '"+empn_tx.getText()+"') ");
+        ConnectionDB.closeConnection();
     }
     
     public void printerinfos(ModelProduct p){

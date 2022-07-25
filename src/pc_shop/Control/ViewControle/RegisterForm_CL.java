@@ -32,7 +32,7 @@ public class RegisterForm_CL {
     @FXML
     TextField Email_tx,Password_tx,Name_tx;
     @FXML
-    RadioButton adminr,employeer;
+    RadioButton Admin,Employee;
     
     Statement state ;
     
@@ -50,14 +50,14 @@ public class RegisterForm_CL {
         ad.setEmail(Email_tx.getText());
         ad.setName(Name_tx.getText());
         ad.setPassword(Password_tx.getText());
-        if(adminr.isCache()){
-            ad.setPermission("admin");
+        if(Employee.isCache()){
+            ad.setPermission("Employee");
         }
         else{
-            ad.setPermission("employee");
+            ad.setPermission("Admin");
         }
         state = ConnectionDB.openConnection().createStatement();
-        state.executeUpdate("insert into users (`Email`,`Password`,`Name`) values ('"+ad.getEmail()+"', '"+ad.getPassword()+"', '"+ad.getName()+"') ");
+        state.executeUpdate("insert into users (`Email`,`Password`,`Name`,`perms`) values ('"+ad.getEmail()+"', '"+ad.getPassword()+"', '"+ad.getName()+"', '"+ad.getPermission()+"') ");
         ConnectionDB.closeConnection();
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Register");

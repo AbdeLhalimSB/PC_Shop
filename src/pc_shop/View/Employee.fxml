@@ -121,9 +121,9 @@
       <TableView fx:id="product_view" layoutX="272.0" layoutY="124.0" onMouseClicked="#clickTable" prefHeight="539.0" prefWidth="796.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="93.0" text="ID" />
-          <TableColumn fx:id="name" prefWidth="197.0" text="Name" />
-            <TableColumn fx:id="email" prefWidth="271.0" text="Email" />
-            <TableColumn fx:id="pass" minWidth="3.0" prefWidth="234.0" text="Password" />
+          <TableColumn fx:id="name" prefWidth="168.0" text="Name" />
+            <TableColumn fx:id="email" prefWidth="273.0" text="Email" />
+            <TableColumn fx:id="pass" minWidth="0.0" prefWidth="261.0" text="Password" />
         </columns>
       </TableView>
    </children>

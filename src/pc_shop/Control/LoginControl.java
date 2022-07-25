@@ -16,8 +16,6 @@ public class LoginControl {
     public boolean checker(Admin ad) throws SQLException{
         st=ConnectionDB.openConnection().createStatement();
         ResultSet res = st.executeQuery("select * from users where Email='"+ad.getEmail()+"' and Password='"+ad.getPassword()+"'");
-        //ResultSet per = st.executeQuery("select Permission from users where Email='"+ad.getEmail()+"' and Password='"+ad.getPassword()+"'");
-//        ad.setPermission("employee");
         if(res.next()){
             return true;
         }
@@ -26,13 +24,13 @@ public class LoginControl {
         }
     }
     
-    public String getType(){
-        
-        if(type.equals("admin"))
-            return "admin";
-        else
-            return "employee";
-    }
+//    public String getType(){
+//        
+//        if(type.equals("admin"))
+//            return "admin";
+//        else
+//            return "employee";
+//    }
     
 //    public boolean per_checker(Admin ad) throws SQLException{
 //        st=ConnectionDB.openConnection().createStatement();

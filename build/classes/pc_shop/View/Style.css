@@ -40,3 +40,14 @@
 .dowara{
     -fx-background-radius: 1000px;
 }
+
+.admin_header{
+    -fx-border-width:3px;
+}
+
+.home_but{
+    -fx-background-radius: 30px 30px 30px 30px;
+    -fx-border-radius: 30px 30px 30px 30px;
+    -fx-border-width:3px;
+    -fx-border-color:red;
+}

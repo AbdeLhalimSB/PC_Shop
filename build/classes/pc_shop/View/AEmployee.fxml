@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1075.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.Employee_CL">
+   <children>
+      <AnchorPane prefHeight="671.0" prefWidth="264.0" style="-fx-background-color: #1F2121;">
+         <children>
+            <Button fx:id="btn_home" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#pro" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="Employee" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_add" layoutX="55.0" layoutY="423.0" mnemonicParsing="false" onAction="#add" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="ADD" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/4105962-add-expand-plus_113920.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_delete" layoutX="55.0" layoutY="572.0" mnemonicParsing="false" onAction="#del" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="DELETE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/4105949-bin-delete-dustbin-remove-trash-trash-can_113940.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_update" layoutX="55.0" layoutY="497.0" mnemonicParsing="false" onAction="#edit" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: #FF0000;" styleClass="exit_btn" stylesheets="@Style.css" text="UPDATE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/4105935-edit-pencil-update_113934.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="Name_tx" focusTraversable="false" layoutX="18.0" layoutY="104.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Name">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <TextField fx:id="Email_tx" focusTraversable="false" layoutX="18.0" layoutY="179.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Email">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <TextField fx:id="Pass_tx" focusTraversable="false" layoutX="18.0" layoutY="252.0" opacity="0.8" prefHeight="61.0" prefWidth="224.0" promptText="Password">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+            <ComboBox fx:id="permss" layoutX="19.0" layoutY="336.0" prefHeight="38.0" prefWidth="224.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="313.0" layoutY="7.0" prefHeight="97.0" prefWidth="715.0">
+         <children>
+            <Button fx:id="btnBack" layoutX="91.0" layoutY="23.0" mnemonicParsing="false" onAction="#Back" prefHeight="72.0" prefWidth="106.0" style="-fx-background-color: #1F2121;" styleClass="button1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/black.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_search" layoutX="525.0" layoutY="24.0" mnemonicParsing="false" onAction="#Search" prefHeight="70.0" prefWidth="102.0" style="-fx-background-color: #1F2121;" styleClass="button1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="search_tx" focusTraversable="false" layoutX="228.0" layoutY="27.0" opacity="0.8" prefHeight="68.0" prefWidth="278.0" promptText="Entre Name ....">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </TextField>
+         </children></Pane>
+      <TableView fx:id="product_view" layoutX="272.0" layoutY="124.0" onMouseClicked="#clickTable" prefHeight="539.0" prefWidth="796.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="93.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="168.0" text="Name" />
+            <TableColumn fx:id="email" prefWidth="220.0" text="Email" />
+            <TableColumn fx:id="pass" minWidth="0.0" prefWidth="185.0" text="Password" />
+            <TableColumn fx:id="perm" prefWidth="129.0" text="Permission" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

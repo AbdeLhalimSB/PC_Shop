@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -124,38 +125,50 @@
          <children>
             <Pane fx:id="print" layoutX="36.0" layoutY="149.0" prefHeight="497.0" prefWidth="477.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="32.0" layoutY="45.0" text="Name" />
-                  <Label layoutX="180.0" layoutY="45.0" text="Quantity" />
-                  <Label layoutX="241.0" layoutY="45.0" text="Price" />
-                  <Label layoutX="351.0" layoutY="45.0" text="Description" />
-                  <Label fx:id="n" alignment="TOP_LEFT" layoutX="18.0" layoutY="79.0" prefHeight="167.0" prefWidth="152.0" />
-                  <Label fx:id="q" alignment="TOP_LEFT" layoutX="179.0" layoutY="77.0" prefHeight="167.0" prefWidth="46.0" textAlignment="CENTER" />
-                  <Label fx:id="pr" alignment="TOP_LEFT" layoutX="234.0" layoutY="78.0" prefHeight="167.0" prefWidth="41.0" textAlignment="CENTER" />
-                  <Label fx:id="d" alignment="TOP_LEFT" layoutX="283.0" layoutY="78.0" prefHeight="167.0" prefWidth="181.0" />
-                  <Line endX="356.0" layoutX="126.0" layoutY="291.0" startX="-126.0" strokeWidth="2.0" />
-                  <TextArea fx:id="w_tx" cache="true" layoutX="33.0" layoutY="321.0" prefHeight="86.0" prefWidth="412.0" promptText="Warranty Details" style="-fx-background-color: none;" stylesheets="@Style.css" />
+                  <Label layoutX="30.0" layoutY="93.0" text="Name" />
+                  <Label layoutX="178.0" layoutY="93.0" text="Quantity" />
+                  <Label layoutX="239.0" layoutY="93.0" text="Price" />
+                  <Label layoutX="349.0" layoutY="93.0" text="Description" />
+                  <Label fx:id="n" alignment="TOP_LEFT" layoutX="16.0" layoutY="127.0" prefHeight="167.0" prefWidth="152.0" />
+                  <Label fx:id="q" alignment="TOP_LEFT" layoutX="177.0" layoutY="125.0" prefHeight="167.0" prefWidth="46.0" textAlignment="CENTER" />
+                  <Label fx:id="pr" alignment="TOP_LEFT" layoutX="232.0" layoutY="126.0" prefHeight="167.0" prefWidth="41.0" textAlignment="CENTER" />
+                  <Label fx:id="d" alignment="TOP_LEFT" layoutX="281.0" layoutY="126.0" prefHeight="167.0" prefWidth="181.0" />
+                  <Line endX="356.0" layoutX="124.0" layoutY="339.0" startX="-126.0" strokeWidth="2.0" />
+                  <TextArea fx:id="w_tx" cache="true" layoutX="33.0" layoutY="346.0" prefHeight="61.0" prefWidth="412.0" promptText="Warranty Details" style="-fx-background-color: none;" stylesheets="@Style.css" />
                   <TextField fx:id="empn_tx" cache="true" layoutX="28.0" layoutY="445.0" prefHeight="25.0" prefWidth="159.0" promptText="Employee" style="-fx-background-color: none;" stylesheets="@Style.css" />
                   <ImageView fitHeight="75.0" fitWidth="102.0" layoutX="381.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/champion_army_reward_achievement_badge_winner_gold_medal_icon_225520.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="21.0" layoutY="254.0" text="TOTAL :" />
-                  <Label fx:id="tt" layoutX="93.0" layoutY="254.0" underline="true" />
-                  <Line endX="352.0" layoutX="115.0" layoutY="280.0" startX="-100.0" strokeWidth="2.0" />
-                  <Line endX="352.0" layoutX="115.0" layoutY="280.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
-                  <Line endX="352.0" layoutX="-337.0" layoutY="279.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
-                  <Line endX="352.0" layoutX="115.0" layoutY="35.0" startX="-100.0" strokeWidth="2.0" />
-                  <Line endX="352.0" endY="-30.0" layoutX="-177.0" layoutY="278.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
-                  <Line endX="352.0" endY="-31.0" layoutX="-122.0" layoutY="279.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
-                  <Line endX="352.0" endY="-30.0" layoutX="-72.0" layoutY="278.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
-                  <Line endX="352.0" layoutX="115.0" layoutY="74.0" startX="-100.0" strokeWidth="2.0" />
-                  <Line endX="352.0" layoutX="115.0" layoutY="249.0" startX="-100.0" strokeWidth="2.0" />
+                  <Label layoutX="19.0" layoutY="302.0" text="TOTAL :" />
+                  <Label fx:id="tt" layoutX="91.0" layoutY="302.0" underline="true" />
+                  <Line endX="352.0" layoutX="113.0" layoutY="328.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="113.0" layoutY="328.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="-339.0" layoutY="327.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="113.0" layoutY="83.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-30.0" layoutX="-179.0" layoutY="326.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-31.0" layoutX="-124.0" layoutY="327.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" endY="-30.0" layoutX="-74.0" layoutY="326.0" startX="352.0" startY="-243.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="113.0" layoutY="122.0" startX="-100.0" strokeWidth="2.0" />
+                  <Line endX="352.0" layoutX="113.0" layoutY="297.0" startX="-100.0" strokeWidth="2.0" />
                   <Label layoutX="179.0" layoutY="4.0" text="Computer Planet">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
+                  <Label layoutX="15.0" layoutY="53.0" text="Client : ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cl_name" cache="true" layoutX="62.0" layoutY="49.0" prefHeight="25.0" prefWidth="159.0" promptText="Client Name" style="-fx-background-color: none;" stylesheets="@Style.css" />
+                  <Label layoutX="287.0" layoutY="53.0" text="Date : ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="date" layoutX="324.0" layoutY="49.0" prefHeight="17.0" prefWidth="141.0" />
                </children></Pane>
             <Button layoutX="180.0" layoutY="663.0" mnemonicParsing="false" onAction="#Print" prefHeight="70.0" prefWidth="230.0" style="-fx-background-color: black;" styleClass="exit_btn" stylesheets="@Style.css" text="Print" textAlignment="CENTER" textFill="#04e104">
                <font>

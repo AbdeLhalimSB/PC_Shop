@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1078.0" style="-fx-background-color: #202225;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.HomeControle">
+   <children>
+      <Label layoutX="606.0" layoutY="99.0" text="DASHBOARD" textFill="#d72323">
+         <font>
+            <Font name="Impact" size="37.0" />
+         </font>
+      </Label>
+      <Line endX="977.0" layoutX="101.0" layoutY="727.0" startX="-100.0" stroke="RED" strokeWidth="2.0">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Line>
+      <Line endX="977.0" layoutX="101.0" startX="-100.0" stroke="RED" strokeWidth="2.0">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Line>
+      <Line endX="895.0" endY="-7.0" layoutX="184.0" layoutY="733.0" startX="894.0" startY="-731.0" stroke="RED" strokeWidth="2.0">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Line>
+      <Line endX="895.0" endY="-7.0" layoutX="-893.0" layoutY="732.0" startX="894.0" startY="-731.0" stroke="RED" strokeWidth="2.0">
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </Line>
+      <ImageView fitHeight="345.0" fitWidth="855.0" layoutX="241.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/logo_transparent.png" />
+         </image>
+      </ImageView>
+      <Line endX="-100.0" endY="-215.0" layoutX="646.0" layoutY="259.0" startX="-100.0" startY="-43.0" stroke="WHITE" strokeWidth="2.0" />
+      <Pane layoutX="157.0" layoutY="325.0" />
+      <Button fx:id="btn_Employee" layoutX="68.0" layoutY="275.0" mnemonicParsing="false" onAction="#openEmployee" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="302.0" layoutY="430.0" onMouseClicked="#openEmployee" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="142.0" fitWidth="137.0" layoutX="104.0" layoutY="281.0" onMouseClicked="#openEmployee" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592855-business-man-employee-general-human-member-office-tie_107745%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="122.0" layoutY="426.0" onMouseClicked="#openEmployee" text="Employees" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="313.0" layoutY="274.0" mnemonicParsing="false" onAction="#openStatistice" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="547.0" layoutY="429.0" onMouseClicked="#openStatistice" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="142.0" fitWidth="137.0" layoutX="349.0" layoutY="278.0" onMouseClicked="#openStatistice" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592819-general-graph-office-overview-part-pie-chart-portion_107739.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="342.0" layoutY="426.0" onMouseClicked="#openStatistice" text="Global Analysis" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="560.0" layoutY="273.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="794.0" layoutY="428.0" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="128.0" fitWidth="137.0" layoutX="601.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592864-general-graph-increase-office-rise-statistics-success_107790.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="627.0" layoutY="423.0" text="Analysis" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="800.0" layoutY="273.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="1034.0" layoutY="428.0" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="128.0" fitWidth="137.0" layoutX="841.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592841-cog-gear-general-machine-office-setting-settings_107765.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="866.0" layoutY="423.0" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="68.0" layoutY="499.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="302.0" layoutY="654.0" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="142.0" fitWidth="137.0" layoutX="104.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592814-document-general-letter-note-office-page-paper_107776.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="153.0" layoutY="647.0" text="Bills" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="313.0" layoutY="498.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="547.0" layoutY="653.0" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="142.0" fitWidth="137.0" layoutX="349.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592828-general-key-key-lock-lock-office-password-security_107759.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="394.0" layoutY="647.0" text="Bank" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="560.0" layoutY="497.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="794.0" layoutY="652.0" startX="-176.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="128.0" fitWidth="137.0" layoutX="601.0" layoutY="511.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592824-airplane-airplane-mode-general-office-plane-transport-travel_107771.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="624.0" layoutY="647.0" text="Vacation" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button layoutX="800.0" layoutY="497.0" mnemonicParsing="false" prefHeight="196.0" prefWidth="209.0" style="-fx-background-color: #202225;" styleClass="home_but" stylesheets="@Style.css" textFill="TRANSPARENT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <CubicCurve controlX1="27.5858154296875" controlX2="-39.4141845703125" controlY1="-162.0" controlY2="-142.0" endX="-25.0" endY="-57.0" fill="#ff1f1f" layoutX="1034.0" layoutY="652.0" startX="-175.4141845703125" startY="-155.0" stroke="BLACK" strokeWidth="0.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CubicCurve>
+      <ImageView fitHeight="142.0" fitWidth="137.0" layoutX="836.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592853-align-employee-general-human-human-list-list-member_107786.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="873.0" layoutY="647.0" text="Clients" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

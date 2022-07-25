@@ -23,7 +23,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import pc_shop.Control.ConnectionDB;
 import pc_shop.Model.Admin;
-import pc_shop.Model.ModelProduct;
 
 /**
  *
@@ -35,9 +34,7 @@ public class Employee_CL {
     @FXML
     TextField Name_tx,Email_tx,Pass_tx,search_tx;
     @FXML
-    ComboBox slm;
-     @FXML
-    private TableView product_view;
+    TableView product_view;
     @FXML
     private TableColumn id;
     @FXML
@@ -46,11 +43,18 @@ public class Employee_CL {
     private TableColumn email;
     @FXML
     private TableColumn pass;
+    @FXML
+    private TableColumn perm;
+    @FXML
+    ComboBox permss;
     
     int ID;
     
     @FXML
     public void initialize() throws SQLException {
+        permss.getItems().removeAll(permss.getItems());
+        permss.getItems().addAll("Employee","Admin");
+        permss.getSelectionModel().select("Employee");
         DisplayEmployees();
     }
     
@@ -60,6 +64,7 @@ public class Employee_CL {
         name.setCellValueFactory(new PropertyValueFactory<>("Name"));
         email.setCellValueFactory(new PropertyValueFactory<>("Email"));
         pass.setCellValueFactory(new PropertyValueFactory<>("Password"));
+        perm.setCellValueFactory(new PropertyValueFactory<>("Permission"));
         product_view.setItems(getAllProduct());
     }
         
@@ -91,9 +96,10 @@ public class Employee_CL {
     public void clickTable(Event e)
     {
        Admin ad =  (Admin) product_view.getSelectionModel().getSelectedItem();
-       Name_tx.setText(ad.getName());
+       Name_tx.setText(ad.getName()+"");
        Email_tx.setText(ad.getEmail()+"");
        Pass_tx.setText(ad.getPassword()+"");
+       permss.setValue(ad.getPermission()+"");
        ID=ad.getId();
     }
     
@@ -101,7 +107,7 @@ public class Employee_CL {
     {
         try {
             state = ConnectionDB.openConnection().createStatement();
-            state.executeUpdate("INSERT INTO `users` ( `Name`, `Email`, `Password`) VALUES ('"+ad.getName()+"','"+ad.getEmail()+"', '"+ad.getPassword()+"');");
+            state.executeUpdate("INSERT INTO `users` ( `Name`, `Email`, `Password`,`perms`) VALUES ('"+ad.getName()+"','"+ad.getEmail()+"', '"+ad.getPassword()+"'), '"+ad.getPermission()+"');");
             ConnectionDB.closeConnection();
         } catch (SQLException ex) {
             ConnectionDB.closeConnection();
@@ -126,7 +132,7 @@ public class Employee_CL {
     {
         try {
             state = ConnectionDB.openConnection().createStatement();
-            state.executeUpdate("UPDATE users set  `Name` = '"+ad.getName()+"', `Email` = '"+ad.getEmail()+"', `Password` = '" + ad.getPassword()+"'  WHERE id = "+ID );
+            state.executeUpdate("UPDATE users set  `Name` = '"+ad.getName()+"', `Email` = '"+ad.getEmail()+"', `Password` = '" + ad.getPassword()+"', `perms`='"+ad.getPermission()+"' WHERE id = "+ID );
             ConnectionDB.closeConnection();
             DisplayEmployees();
         } catch (SQLException ex) {
@@ -145,6 +151,7 @@ public class Employee_CL {
             obj.setName(result.getString(2));
             obj.setEmail(result.getString(3));
             obj.setPassword(result.getString(4));
+            obj.setPermission(result.getString(5));
             Admin.add(obj);
         }
         ConnectionDB.closeConnection();
@@ -161,6 +168,7 @@ public class Employee_CL {
             obj.setName(result.getString(2));
             obj.setEmail(result.getString(3));
             obj.setPassword(result.getString(4));
+            obj.setPermission(result.getString(5));
             Admin.add(obj);
         }
         ConnectionDB.closeConnection();
@@ -179,7 +187,7 @@ public class Employee_CL {
            Stage stage = (Stage) node.getScene().getWindow();                  
            stage.close();
 
-           Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Home.fxml"));       
+           Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/AHome.fxml"));       
            Scene scene = new Scene(root);       
            stage.setScene(scene);
            stage.show();
