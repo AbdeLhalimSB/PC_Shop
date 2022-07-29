@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="1001.0" style="-fx-background-color: #1F2121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pc_shop.Control.ViewControle.Client_CL">
+   <children>
+      <Label layoutX="484.0" layoutY="21.0" text="Clients" textFill="RED">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="67.0" fitWidth="75.0" layoutX="36.0" layoutY="14.0" onMouseClicked="#Back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/black.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="61.0" fitWidth="84.0" layoutX="403.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/3592853-align-employee-general-human-human-list-list-member_107786.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="cl" layoutX="33.0" layoutY="119.0" prefHeight="460.0" prefWidth="940.0">
+        <columns>
+          <TableColumn fx:id="Name" prefWidth="939.0" text="Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="206.0" layoutY="601.0" text="Top Client : " textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="613.0" layoutY="601.0" text="Client Sells : " textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tc" layoutX="389.0" layoutY="601.0" text="-" textFill="#07ff00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cs" layoutX="796.0" layoutY="601.0" text="-" textFill="#07ff00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -176,7 +176,7 @@ public class Statistic_CL {
     
     public void Reset(Event e) throws SQLException{
         state = ConnectionDB.openConnection().createStatement();
-        state.executeUpdate("UPDATE `statistic` SET `totalsells`='0',`pcs`='0',`cpus`='0',`gpus`='0',`totalstock`='0',`pcst`='0',`cpust`='0',`gpust`='0' ");
+        state.executeUpdate("UPDATE `statistic` SET `totalsells`='0',`pcs`='0',`cpus`='0',`gpus`='0',`ram`='0' ,`md`='0',`b`='0',`m`='0',`c`='0',`psss`='0',`s`='0',`pco`='0',`od`='0',`cable`='0',`ac`='0'");
         ConnectionDB.closeConnection();
         getalldata();
     }

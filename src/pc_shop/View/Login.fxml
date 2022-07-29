@@ -60,7 +60,7 @@
             <Image url="@../image/password.png" />
          </image>
       </ImageView>
-      <Label fx:id="lbmsg" layoutX="407.0" layoutY="570.0" prefHeight="17.0" prefWidth="10.0" textFill="RED">
+      <Label fx:id="lbmsg" layoutX="407.0" layoutY="570.0" prefHeight="17.0" prefWidth="267.0" textFill="RED">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

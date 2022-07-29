@@ -33,15 +33,15 @@ public class HomeControle {
             stage.setScene(scene);
             stage.show();
     }
-//    public void openServices(Event e) throws IOException{
-//        Node node = (Node) e.getSource();
-//            Stage stage = (Stage) node.getScene().getWindow();                  
-//            stage.close();
-//            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Services.fxml"));       
-//            Scene scene = new Scene(root);       
-//            stage.setScene(scene);
-//            stage.show();
-//    }
+    public void openBills(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Bills.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
     public void openStatistice(Event e) throws IOException{
         Node node = (Node) e.getSource();
             Stage stage = (Stage) node.getScene().getWindow();                  
@@ -51,15 +51,42 @@ public class HomeControle {
             stage.setScene(scene);
             stage.show();
     }
-//    public void openEmployee(Event e) throws IOException{
-//        Node node = (Node) e.getSource();
-//            Stage stage = (Stage) node.getScene().getWindow();                  
-//            stage.close();
-//            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Employee.fxml"));       
-//            Scene scene = new Scene(root);       
-//            stage.setScene(scene);
-//            stage.show();
-//    }
+    public void openClients(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Clients.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
+    public void openBank(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Bank.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
+    public void openSettings(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Settings.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
+    public void openAnalysis(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Analy.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
 //    
 //    public void support(Event e){
 //        Alert alert = new Alert(Alert.AlertType.INFORMATION);

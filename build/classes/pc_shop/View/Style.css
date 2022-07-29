@@ -31,6 +31,7 @@
 
 .login_txb{
     -fx-background-radius: 50px 50px 50px 50px;
+    -fx-background-color: white;
 }
 
 .home{

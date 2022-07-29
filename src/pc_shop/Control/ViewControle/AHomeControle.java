@@ -68,6 +68,15 @@ public class AHomeControle {
             stage.setScene(scene);
             stage.show();
     }
+    public void openSettings(Event e) throws IOException{
+        Node node = (Node) e.getSource();
+            Stage stage = (Stage) node.getScene().getWindow();                  
+            stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("/pc_shop/View/Settings.fxml"));       
+            Scene scene = new Scene(root);       
+            stage.setScene(scene);
+            stage.show();
+    }
     
     public void support(Event e){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
